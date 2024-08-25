@@ -2,12 +2,11 @@ Feature: User Authentication tests
 
     Background: Login Scenario
         Given  User navigates to website
-        And User click on form menu
-        And User click on login menu
+        And User click on account button
 
     Scenario: Login should be successfull
-        And user enter username as "admin@admin.com"
-        And user enter password as "admin123"
+        And user enter username as "smnizamani@gmail.com"
+        And user enter password as "123456"
         When user clicks on submit button
         Then login should be successfull
 
