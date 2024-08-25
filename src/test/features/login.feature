@@ -1,3 +1,5 @@
+@Check
+
 Feature: User Authentication tests
 
     Background: Login Scenario

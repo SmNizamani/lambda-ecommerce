@@ -29,4 +29,8 @@ export class RegisterPage {
         await this.registerPageLocators.privacyPolicyBtn().click();
         await this.registerPageLocators.continueBtn().click();
     };
+
+    public async goToRegisterAccount():Promise<void>{
+        await pageFixture.page.goto('https://ecommerce-playground.lambdatest.io/index.php?route=account/register');
+    };
 };

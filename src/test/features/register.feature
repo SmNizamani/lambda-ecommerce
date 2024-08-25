@@ -14,5 +14,5 @@ Feature: Verify that the user is able to register an account.
         Then User clicks the continue button.
 
         Examples:
-            | FirstName  | LastName  | Email                | Password       |
-            | FacadeUser | UserFace  | facade23@gmail.com   | facading123!@  |
+            | FirstName  | LastName  | Email                | Phone          | Password  | ConfirmPassword |
+            | FacadeUser | UserFace  | facade23@gmail.com   | facading123!@  | test123!! | test123!!       |
