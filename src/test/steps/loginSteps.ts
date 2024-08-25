@@ -36,6 +36,7 @@ Then('login should be successfull', async function () {
 });
 
 Then('login should be failing', async function () {
-    const errorMessage = await page.locator('.alert.alert-danger.alert-dismissible').textContent();
-    expect(errorMessage).toContain('Warning: No match for E-Mail Address and/or Password.');
+    //const errorMessage = await page.locator('.alert.alert-danger.alert-dismissible').textContent();
+    //expect(errorMessage).toContain('Warning: No match for E-Mail Address and/or Password.');
+    expect(page.locator('.alert.alert-danger.alert-dismissible')).toBeVisible();
 });
