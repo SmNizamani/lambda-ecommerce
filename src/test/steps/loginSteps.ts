@@ -7,40 +7,35 @@ let page: Page;
 Given('User navigates to website', async function () {
     browser = await chromium.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto("https://qa-practice.netlify.app/")
+    await page.goto("https://ecommerce-playground.lambdatest.io/")
 
 });
 
-Given('User click on form menu', async function () {
-    await page.locator("(//a[@class='dropdown-toggle'])[1]").click();
+Given('User click on account button', async function () {
+    await page.locator("//a[@role='button']//span[@class='title'][normalize-space()='My account']").click();
     //    await page.locator("//span[normalize-space(text())='Login']").click();
 });
 
-Given('User click on login menu', async function () {
-    await page.locator('#login').click();
-    //    await page.locator("//span[normalize-space(text())='Login']").click();
-});
 
 Given('user enter username as {string}', async function (username) {
-    await page.locator('#email').fill(username);
+    await page.locator('#input-email').fill(username);
 
 });
 
 Given('user enter password as {string}', async function (password) {
-    await page.locator('#password').fill(password);
+    await page.locator('#input-password').fill(password);
 });
 
 When('user clicks on submit button', async function () {
-    await page.locator('#submitLoginBtn').click()
+    await page.locator('input[value="Login"]').click()
 });
-
 
 Then('login should be successfull', async function () {
     const currentUrl = page.url();
-    expect(currentUrl).toBe('https://qa-practice.netlify.app/auth_ecommerce');
+    expect(currentUrl).toBe('https://ecommerce-playground.lambdatest.io/index.php?route=account/account');
 });
 
 Then('login should be failing', async function () {
-    const user = await page.locator("(//div[@id='message'])[1]").textContent();
-    console.log("Logged user: " + user)
+    const errorMessage = await page.locator('.alert.alert-danger.alert-dismissible').textContent();
+    expect(errorMessage).toContain('Warning: No match for E-Mail Address and/or Password.');
 });
