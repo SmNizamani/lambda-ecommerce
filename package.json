@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test --config=config/cucumber.js"
+    "test": "cucumber-js test --config=config/cucumber.js",
+    "cucumber:lambda:tag": "cucumber-js --config=config/cucumber.js --tags "
   },
   "keywords": [],
   "author": "",

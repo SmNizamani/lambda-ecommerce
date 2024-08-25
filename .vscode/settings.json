@@ -1,2 +1,15 @@
 {
-}
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Mode",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/config/cucumber.js",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "openOnSessionStart",
+        "trace": true,
+        "outputCapture": "std",
+      }
+    ]
+  }
