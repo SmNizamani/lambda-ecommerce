@@ -19,7 +19,7 @@ Before(async function () {
 After(async function ({pickle, result}) {
     console.log(result?.status);
     if(result?.status == Status.PASSED){
-        const img = await pageFixture.page.screenshot({path: `./text-results/screenshots/${pickle.name}.png`, type: "png"});
+        const img = await pageFixture.page.screenshot({path: `./test-results/screenshots/${pickle.name}.png`, type: "png"});
         await this.attach(img, "image/png");
     };
 });
