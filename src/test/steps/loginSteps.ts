@@ -17,5 +17,5 @@ When('The user enters {string} and {string}.', async function () {
 
 Then('The user is logged in.', async function () {
     // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    return 'pending123123';
   });
