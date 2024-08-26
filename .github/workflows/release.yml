@@ -18,6 +18,6 @@ jobs:
             - run: npx semantic-release
             - run: gh issue --repo ${{ github.repository }} \ create --title "Issue title" --body "Issue body"
               env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                GITHUB_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
