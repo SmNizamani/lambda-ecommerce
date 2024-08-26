@@ -21,9 +21,9 @@ When('The user enters {string}, {string}, {string}, {string}, {string}, {string}
 });
 
 When('The user agrees to privacy policy.', async function () {
-
+    await registerPage.selectPrivacyPolicy();
 });
 
 Then('User clicks the continue button.', async function () {
-
+    await registerPage.continueButton();
 });
