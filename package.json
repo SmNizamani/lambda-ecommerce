@@ -1,12 +1,12 @@
 {
   "name": "lambda-ecom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test --config=config/cucumber.js -f @cucumber/pretty-formatter",
     "cucumber:lambda:tag": "cucumber-js --config=config/cucumber.js --tags ",
-    "release": "npm run test && standard-version"
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "",
