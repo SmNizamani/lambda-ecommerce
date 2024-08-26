@@ -1,4 +1,4 @@
-@Check
+@Login @Regression
 
 Feature: User Authentication tests
 
