@@ -15,7 +15,7 @@ jobs:
               with:
                 node-version: 20
             - run: npm ci
-            - run: npm install -g typescript@latest
+            - run: npm install - g typescript
             - run: npx semantic-release
             - run: gh issue --repo ${{ github.repository }} \ create --title "Issue title" --body "Issue body"
               env:

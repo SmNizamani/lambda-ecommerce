@@ -20,6 +20,8 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@cucumber/pretty-formatter": "^1.0.1"
+    "-": "^0.0.1",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "g": "^2.0.1"
   }
 }
