@@ -26,7 +26,13 @@ export class RegisterPage {
         await this.registerPageLocators.phone().fill(phone);
         await this.registerPageLocators.password().fill(password);
         await this.registerPageLocators.confirmPass().fill(confirmPassword);
+    };
+
+    public async selectPrivacyPolicy():Promise<void>{
         await this.registerPageLocators.privacyPolicyBtn().click();
+    };
+
+    public async continueButton():Promise<void>{
         await this.registerPageLocators.continueBtn().click();
     };
 
