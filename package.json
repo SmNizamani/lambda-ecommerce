@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test --config=config/cucumber.js",
+    "test": "cucumber-js test --config=config/cucumber.js -f @cucumber/pretty-formatter",
     "cucumber:lambda:tag": "cucumber-js --config=config/cucumber.js --tags "
   },
   "keywords": [],
@@ -15,5 +15,8 @@
     "@playwright/test": "^1.46.1",
     "@types/node": "^22.5.0",
     "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@cucumber/pretty-formatter": "^1.0.1"
   }
 }
