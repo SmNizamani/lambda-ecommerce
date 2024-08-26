@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js test --config=config/cucumber.js",
-    "cucumber:lambda:tag": "cucumber-js --config=config/cucumber.js --tags "
+    "cucumber:lambda:tag": "cucumber-js --config=config/cucumber.js --tags ",
+    "release": "npm run test && standard-version"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "@cucumber/cucumber": "^10.9.0",
     "@playwright/test": "^1.46.1",
     "@types/node": "^22.5.0",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.2"
   }
 }
