@@ -28,7 +28,6 @@ export class LoginPage {
         await this.LoginPageLocators.usernameField().fill(uname);
         await this.LoginPageLocators.passwordField().fill(pword);
         await this.LoginPageLocators.subtmitBtn().click();
-        console.log();
     };
 
     public async loginSuccessCase(errorMessage: string): Promise<void> {
