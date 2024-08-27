@@ -1,9 +1,8 @@
-name: release
+name: v1.2.0
 on:
-   push:
+  push:
     branches:
       main
-
 
 jobs:
     release:
@@ -18,7 +17,6 @@ jobs:
               with:
                 node-version: 20
             - run: npm ci
-            - run: npm run build
             - run: npx semantic-release
             - run: gh issue --repo ${{ github.repository }} \ create --title "Issue title" --body "Issue body"
               env:
