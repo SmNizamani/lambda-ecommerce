@@ -1,11 +1,9 @@
 name: v1.2.0
 on:
-  push:
-    branches:
-      main
+  push
 
 jobs:
-    release:
+    Release-Job:
       permissions:
         contents: write
         issues: write
@@ -18,9 +16,7 @@ jobs:
                 node-version: 20
             - run: npm ci
             - run: npx semantic-release
-            - run: gh issue --repo ${{ github.repository }} \ create --title "Issue title" --body "Issue body"
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
