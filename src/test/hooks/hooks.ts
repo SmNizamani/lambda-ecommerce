@@ -2,6 +2,7 @@ import { Browser, BrowserContext, chromium } from "@playwright/test";
 import { pageFixture } from "./pageFixture";
 import { After, AfterAll, Before, BeforeAll, Status } from "@cucumber/cucumber";
 import { config } from "../../../playwright.config"
+import { Console } from "console";
 
 let browser: Browser;
 let context: BrowserContext;
@@ -27,4 +28,6 @@ After(async function ({pickle, result}) {
 AfterAll(async function () {
     await pageFixture.page.waitForTimeout(2000);
     await browser.close();
+    console.log();
+    
 });
