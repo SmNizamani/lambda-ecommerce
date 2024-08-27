@@ -1,9 +1,11 @@
 name: v1.2.0
 on:
-   push
+  push:
+    branches:
+      main
 
 jobs:
-    Release-Job:
+    release:
       permissions:
         contents: write
         issues: write
@@ -15,7 +17,6 @@ jobs:
               with:
                 node-version: 20
             - run: npm ci
-            - run: npm install --save-dev typescript
             - run: npx semantic-release
             - run: gh issue --repo ${{ github.repository }} \ create --title "Issue title" --body "Issue body"
               env:
