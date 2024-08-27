@@ -7,38 +7,75 @@ import { MyAccount } from "../pages/MyaccountPage";
 
 let loginPage = new LoginPage(pageFixture.page)
 let myAcc = new MyAccount(pageFixture.page)
-Given('User navigates to website.', async function () {
-    await loginPage.goToWebpage();
-});
 
-Given('User has signed into the web application.', async function () {
-    //assert url - acc page.
-});
+// NAME CHANGE SCENARIO
 
-Given('User clicks on Edit Account Information.', async function () {
-    await myAcc.goToEditAccount();
-});
-
-When('User edit name field with {string}', async function (newName: string) {
-    await myAcc.enterNewName(newName);
-
-});
-
-When('User clicks on submit button.', async function () {
-    await myAcc.clickOnSubmitBtn();
-});
-// Remove below function.
-When('User clicks on submit button.', async function (featureSectionName: string) {
-    await expect(pageFixture.page.locator("div[id='content'] div:nth-child(1) h2:nth-child(1)")).toHaveText(featureSectionName)
-});
-
-Then('Success Message should be displayed.', async function () {
-    await expect(pageFixture.page.locator('.alert.alert-danger.alert-dismissible')).toBeVisible();
-});
-
-Then('Error Message should be displayed.', async function () {
-    await expect(pageFixture.page.locator('.alert.alert-danger.alert-dismissible')).toBeVisible();
-});
+         Given('User navigates to website.', async function () {
+           loginPage.goToWebpage();
+         });
 
 
+         Given('User has signed into the web application.', async function () {
+           // Write code here that turns the phrase above into concrete actions
+           //return 'pending';
+         });
+
+         Given('User clicks on Edit Account Information.', async function () {
+           // Write code here that turns the phrase above into concrete actions
+           //return 'pending';
+         });
+
+
+         When('User edit name field with {string}.', async function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           //return 'pending';
+         });
+
+
+         When('User clicks on submit button.', async function () {
+           // Write code here that turns the phrase above into concrete actions
+           //return 'pending';
+         });
+
+
+         Then('Success Message should be displayed.', async function () {
+           // Write code here that turns the phrase above into concrete actions
+           //return 'pending';
+         });
+
+
+
+         
+         //Empty Name Field Scenario
+
+
+           Given('User navigates to website.', async function () {
+             // Write code here that turns the phrase above into concrete actions
+             //return 'pending';
+           });
+  
+           Given('User has signed into the web application.', async function () {
+             // Write code here that turns the phrase above into concrete actions
+             ////return 'pending';
+           });
+
+           Given('User clicks on Edit Account Information.', async function () {
+             // Write code here that turns the phrase above into concrete actions
+             ////return 'pending';
+           });
+  
+         When('User edit name field with {string}.', async function (string) {
+             // Write code here that turns the phrase above into concrete actions
+             ////return 'pending';
+           });
+
+           When('User clicks on submit button.', async function () {
+             // Write code here that turns the phrase above into concrete actions
+             ////return 'pending';
+           });
+  
+           Then('Error Message should be displayed.', async function () {
+             // Write code here that turns the phrase above into concrete actions
+             ////return 'pending';
+           });
 
