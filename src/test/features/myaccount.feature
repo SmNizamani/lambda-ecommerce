@@ -11,7 +11,7 @@ Feature: User Authentication tests
         And User clicks on submit button.
         Then Success Message should be displayed.
 
-    Scenario: Empty Name Field Scenario
+    Scenario: Add new address.
         Given User clicks on Edit Account Information.
         When User edit name field with "".
         And User clicks on submit button.
