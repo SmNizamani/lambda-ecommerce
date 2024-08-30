@@ -21,7 +21,7 @@ export class MyAccount {
         continueBtn: () => pageFixture.page.locator("input[value='Continue']")
     };
 
-    public async loginWebapp(): Promise<void> {
+    public async userLogin(): Promise<void> {
         await pageFixture.page.goto('https://ecommerce-playground.lambdatest.io/');
         await this.myaccLocators.accountBtn().click();
         await this.myaccLocators.usernameField().fill("smnizamani@gmail.com");
