@@ -1,8 +1,15 @@
+const{DEFAULT_THEME} = require("@cucumber/pretty-formatter")
+
 module.exports = {
 
     default: {
         formatOptions: {
             snippetInterface: "async-await", 
+            colorsEnabled: true,
+            theme: {
+                ...DEFAULT_THEME,
+                'step text': ['green']
+            }
         },
         compilerOptions: {
             esModuleInterop: true,
